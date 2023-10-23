@@ -2,10 +2,11 @@ package com.nhnacademy.aiot;
 
 public enum HttpStatus {
     OK(200, "OK"),
+    NO_CONTENT(204, "No Content"),
     FORBIDDEN(403, "Forbidden"),
     NOT_FOUND(404, "Not Found"),
-    CONFLICT(409, "Conflict"),
-    METHOD_NOT_ALLOWED(405, "Method Not Allowed");
+    METHOD_NOT_ALLOWED(405, "Method Not Allowed"),
+    CONFLICT(409, "Conflict");
 
 
     HttpStatus(int status, String reason) {

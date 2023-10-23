@@ -149,12 +149,24 @@ public class ServiceHandler extends Thread {
                 } else {
                     response.setStatus(HttpStatus.METHOD_NOT_ALLOWED);
                 }
+            } else if (request.getMethod().equals("DELETE")) {
+                fileDelete(request, response);
             }
             sendResponse(socketOut, response);
 
         } catch (IOException e) {
             Thread.currentThread().interrupt();
         }
+    }
+
+    private void fileDelete(Request request, Response response) {
+        File file = new File(SimpleHttpd.DOCUMENT_ROOT + request.getPath());
+        if (!file.delete()) {
+            response.setStatus(HttpStatus.FORBIDDEN);
+            return;
+        }
+        response.setStatus(HttpStatus.NO_CONTENT);
+
     }
 
     private void fileUpload(Request request, Response response) throws IOException {
