@@ -1,6 +1,6 @@
 # simple-httpd
 
-python의 SimpleHTTPServer 모듈과 유사하게 구현해본다.
+python의 SimpleHTTPServer 모듈과 유사하게 구현해본다 🔫
 
 ### 요구 사항
 - Argument로 port를 받는다.
