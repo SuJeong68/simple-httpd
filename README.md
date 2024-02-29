@@ -8,7 +8,7 @@ Python의 SimpleHTTPServer 모듈과 유사하게 구현해본 프로젝트입�
 
 - GET "/"
   - 현재 폴더 내부 목록 응답
-- GET "/file-path"
+- GET "/{file-path}"
   - 파일이 존재하면, 200 OK + 파일 컨텐츠 응답
   - 파일이 존재하지 않으면, 404 Not Found 응답
   - Content-Type, Content-Length 포함 응답
@@ -20,7 +20,7 @@ Python의 SimpleHTTPServer 모듈과 유사하게 구현해본 프로젝트입�
   - 같은 이름의 파일이 이미 있으면, 409 Conflict 응답
   - multipart/form-data 파일 업로드 외의 POST 요청이면, 405 Method Not Allowed 응답
 
-- DELETE "/{file}"
+- DELETE "/{file-path}"
   - 파일을 지울 수 있으면 지우고, 204 No Content 응답
   - URL에 지정된 파일이 존재하지 않으면, 204 No Content 응답
   - URL에 지정된 파일을 지울 수 없으면, 403 Forbidden 응답
