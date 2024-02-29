@@ -1,11 +1,10 @@
 # simple-httpd
 
-python의 SimpleHTTPServer 모듈과 유사하게 구현해본다 🔫
+python의 SimpleHTTPServer 모듈과 유사하게 구현해본 프로젝트입니다 🔫
 
 ### 요구 사항
-- Argument로 port를 받는다.
-  - port가 주어지지 않을 경우, 80을 사용한다.
-- 프로그램이 실행된 디렉토리를 document-root로 하는 웹서버로 동작한다.
+- Argument로 port를 받고, port가 주어지지 않을 경우, 80을 사용합니다.
+- 프로그램이 실행된 디렉토리를 document-root로 하는 웹서버로 동작합니다.
 
 - GET "/"
   - 현재 폴더 내부 목록 응답
